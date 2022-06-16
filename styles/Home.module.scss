@@ -1,0 +1,25 @@
+.hero {
+  min-height: 32rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #c7f9cc, #b7f6bf, #a6f3b2, #94f0a5, #80ed99);
+
+  .title {
+    font-size: 6.18rem;
+  }
+
+  .description {
+    font-size: 1.125rem;
+    color: var(--gray);
+  }
+}
+
+.blogPosts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 2rem;
+  margin-block: 10rem;
+}

@@ -1,0 +1,59 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+
+  &.hasBg,
+  &.notHomeNav {
+    background-color: var(--green);
+    transition: background-color .5s ease;
+  }
+
+  .navItems {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    a {
+      color: var(--black);
+      font-weight: 500;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: transparent;
+        margin-block: .5rem;
+      }
+
+      &.active {
+        color: var(--blue);
+        font-weight: 700;
+
+        &:after {
+          background-color: var(--blue);
+        }
+      }
+
+      &:hover {
+        color: var(--blue);
+      }
+    }
+  }
+
+  #progress {
+    --progress: 0;
+    position: absolute;
+    bottom: -10px;
+    height: 10px;
+    width: var(--progress);
+    background-color: var(--blue);
+    transition: width 100ms ease;
+  }
+}

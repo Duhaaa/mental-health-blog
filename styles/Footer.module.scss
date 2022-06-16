@@ -1,0 +1,10 @@
+.footer {
+  background-color: var(--black);
+  padding-block: 2rem;
+
+  .footerContent {
+    max-width: 80%;
+    margin: 0 auto;
+    color: var(--white);
+  }
+}

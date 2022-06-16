@@ -1,0 +1,58 @@
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.header {
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+
+  .category {
+    display: inline-block;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: .5rem 1rem;
+    border-radius: 100vh;
+    margin-right: 1rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+    margin-block: 2rem;
+  }
+
+  .created {
+    color: var(--gray);
+  }
+}
+
+.hero {
+  height: 32rem;
+  width: 80%;
+
+  .coverPhoto {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+  }
+}
+
+
+
+.blogPost {
+  margin-top: 2rem;
+  width: 700px;
+
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: .8rem;
+    line-height: 1.6em;
+  }
+}
