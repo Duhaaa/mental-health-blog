@@ -66,7 +66,7 @@ export default function Home({blogPosts}) {
         </div>
         <div id="blog" className={styles.blogPostsContainer}>
           <h2 className={styles.blogPostsTitle}>
-            Our conversation starts here
+            Our conversation starts <span>here</span>
           </h2>
           <div className={styles.blogPosts}>
             {blogPosts.map((blogPost, index) => (

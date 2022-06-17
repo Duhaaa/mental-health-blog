@@ -10,9 +10,9 @@ export default function Navbar() {
 
   const navLinks = [
     { title: 'Home', path: '/' },
-    { title: 'About', path: '/about' },
     { title: 'Blog', path: '/blog' },
-    { title: 'Contact', path: '/contact' },
+    { title: 'About', path: '/about' },
+    // { title: 'Contact', path: '/contact' },
   ];
 
   function updateProgressBar() {
