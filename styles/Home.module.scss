@@ -1,25 +1,70 @@
 .hero {
-  min-height: 32rem;
+  height: 100vh;
+  background-color: var(--white);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(to bottom, #c7f9cc, #b7f6bf, #a6f3b2, #94f0a5, #80ed99);
 
-  .title {
-    font-size: 6.18rem;
-  }
+  .heroContainer {
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
 
-  .description {
-    font-size: 1.125rem;
-    color: var(--gray);
+    .heroContent {
+      max-width: 40%;
+
+      .heroTitle {
+        font-size: 6.18rem;
+        color: var(--black);
+
+        span {
+          color: var(--green);
+        }
+      }
+
+      .heroDescription {
+        margin-top: 1rem;
+        color: var(--gray);
+        line-height: 1.6em;
+        margin-bottom: 4rem;
+      }
+
+      .heroButton {
+        background-color: var(--green);
+        color: var(--white);
+        padding: 1.2rem 2.5rem;
+        border-radius: 100vh;
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: .1rem;
+      }
+    }
+
+    .heroImage {
+      width: 600px;
+
+      img {
+        max-width: 100%;
+      }
+    }
   }
 }
 
-.blogPosts {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  column-gap: 2rem;
-  margin-block: 10rem;
+.blogPostsContainer {
+  max-width: 80%;
+  margin: 0 auto;
+  padding-block: 10rem;
+
+  .blogPostsTitle {
+    font-size: 3.88rem;
+    margin-bottom: 2rem;
+  }
+
+  .blogPosts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+  }
 }
+
+

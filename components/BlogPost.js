@@ -12,15 +12,18 @@ export default function BlogPost({title, coverPhoto, slug, index, category, crea
             <img src={coverPhoto.url} alt={title} />
           </div>
           <div className={styles.innerContent}>
-            <div className={styles.categoryDurationWrapper}>
+            <div>
               <span className={styles.category}>{category}</span>
+            </div>
+            <h3 className={styles.blogTitle}>{title}</h3>
+            {/* <div className={styles.textContent} dangerouslySetInnerHTML={{__html: content.html}} /> */}
+            <div className={styles.innerFooter}>
+              <span className={styles.created}>{formatDate(createdAt)}</span>
+              <span className={styles.bullet}>&#9679;</span>
               { minutesToRead(content.text) > 0 &&
-                <span>{minutesToRead(content.text)} min read</span>
+                <span className={styles.minutesToRead}>{minutesToRead(content.text)} min read</span>
               }
             </div>
-            <h2 className={styles.blogTitle}>{title}</h2>
-            <div className={styles.textContent} dangerouslySetInnerHTML={{__html: content.html}} />
-            <p className={styles.created}>{formatDate(createdAt)}</p>
           </div>
         </div>
       </Link>

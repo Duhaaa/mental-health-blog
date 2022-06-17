@@ -9,9 +9,10 @@ export default function Navbar() {
   const progressBar = useRef();
 
   const navLinks = [
-    { title: 'HOME', path: '/' },
-    { title: 'BLOG', path: '/blog' },
-    { title: 'CONTACT', path: '/contact' },
+    { title: 'Home', path: '/' },
+    { title: 'About', path: '/about' },
+    { title: 'Blog', path: '/blog' },
+    { title: 'Contact', path: '/contact' },
   ];
 
   function updateProgressBar() {
@@ -22,33 +23,11 @@ export default function Navbar() {
     progressBar.current.style.setProperty('--progress', scrollPercent);
   }
 
-  function changeNavbarColor() {
-    const hero = document.querySelector('#hero');
-
-    if (!hero) {
-      navBar.current.classList.add(styles.navBarGreen);
-      return;
-    }
-
-    const { scrollTop } = document.documentElement;
-    const offsetBottom = hero.offsetTop + hero.offsetHeight;
-    const navBarHeight = navBar.current.offsetHeight;
-
-    // If the scroll is past the hero, change the navbar color
-    if (scrollTop > offsetBottom - navBarHeight) {
-      navBar.current.classList.add(styles.hasBg);
-    } else {
-      navBar.current.classList.remove(styles.hasBg);
-    }
-  }
-
   useEffect(() => {
-    window.addEventListener('scroll', changeNavbarColor);
     if (router.pathname.includes('blog')) {
       window.addEventListener('scroll', updateProgressBar);
     }
     return () => {
-      window.removeEventListener('scroll', changeNavbarColor);
       if (router.pathname.includes('blog')) {
         window.removeEventListener('scroll', updateProgressBar);
       }
@@ -59,18 +38,26 @@ export default function Navbar() {
   return(
     <div>
       <nav ref={navBar} className={[styles.navbar, router.pathname !== '/' ? styles.notHomeNav : ''].join(' ')}>
-        <ul className={styles.navItems}>
-          {navLinks.map((navLink) => (
-            <li key={navLink.title}>
-              <Link href={navLink.path} passHref>
-                <a className={router.pathname === navLink.path ? styles.active : ''}>{navLink.title}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-        {router.pathname.includes('blog') &&
-          <div id={styles.progress} ref={progressBar}/>
-        }
+        <div className={styles.navContainer}>
+          <Link href="/" passHref>
+            <a className={styles.homelink}>
+              {process.env.NEXT_PUBLIC_APP_TITLE}.
+            </a>
+          </Link>
+          <ul className={styles.navItems}>
+            {navLinks.map((navLink) => (
+              <li key={navLink.title}>
+                <Link href={navLink.path} passHref>
+                  <a className={router.pathname === navLink.path ? styles.active : ''}>{navLink.title}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+        </div>
+         {router.pathname.includes('blog') &&
+            <div id={styles.progress} ref={progressBar}/>
+          }
       </nav>
     </div>
   );

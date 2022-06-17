@@ -2,13 +2,27 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: transparent;
+  background-color: var(--white);
   padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
+
+  .navContainer {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .homelink {
+      font-size: 2rem;
+      font-family: 'Forum', serif;
+      font-weight: bold;
+    }
+  }
 
   &.hasBg,
   &.notHomeNav {
-    background-color: var(--green);
+    background-color: var(--white);
     transition: background-color .5s ease;
   }
 
@@ -20,8 +34,10 @@
     gap: 2rem;
 
     a {
-      color: var(--black);
-      font-weight: 500;
+      font-family: 'Forum', serif;
+      color: var(--gray);
+      font-weight: bold;
+      position: relative;
 
       &:after {
         content: '';
@@ -30,14 +46,14 @@
         height: 2px;
         background-color: transparent;
         margin-block: .5rem;
+        position: absolute;
       }
 
       &.active {
-        color: var(--blue);
-        font-weight: 700;
+        color: var(--black);
 
         &:after {
-          background-color: var(--blue);
+          background-color: var(--black);
         }
       }
 
@@ -53,7 +69,7 @@
     bottom: -10px;
     height: 10px;
     width: var(--progress);
-    background-color: var(--blue);
+    background-color: var(--green);
     transition: width 100ms ease;
   }
 }

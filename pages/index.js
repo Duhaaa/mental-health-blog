@@ -2,6 +2,7 @@ import BlogPost from '../components/BlogPost';
 import styles from '../styles/Home.module.scss';
 import { GraphQLClient , gql} from 'graphql-request';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const graphcms = new GraphQLClient(process.env.GRAPHCMS_API_URL);
 
@@ -42,14 +43,31 @@ export default function Home({blogPosts}) {
       </Head>
       <main>
         <div id="hero" className={styles.hero}>
-          <h1 className={styles.title}>
-            Internalized.
-          </h1>
-          <p className={styles.description}>
-
-          </p>
+          <div className={styles.heroContainer}>
+            <div className={styles.heroContent}>
+              <h1 className={styles.heroTitle}>
+                Let&apos;s talk about <span>mental health</span>
+              </h1>
+              <p className={styles.heroDescription}>
+                Come with me to the edge of the world. We will talk about mental health and how to deal with it. Internalized is the place where you can be yourself, together with me.
+              </p>
+              <p>
+                <Link href="/blog" passHref>
+                  <a className={styles.heroButton}>
+                    Read my blog
+                  </a>
+                </Link>
+              </p>
+            </div>
+            <div className={styles.heroImage}>
+              <img src="/hero.svg" alt="Internalized" />
+          </div>
+          </div>
         </div>
-        <div id="blog" className="container">
+        <div id="blog" className={styles.blogPostsContainer}>
+          <h2 className={styles.blogPostsTitle}>
+            Our conversation starts here
+          </h2>
           <div className={styles.blogPosts}>
             {blogPosts.map((blogPost, index) => (
               <BlogPost

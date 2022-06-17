@@ -1,80 +1,91 @@
 .card {
+  grid-row: 1 / span 2;
+
   .cardContent {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    border-radius: 24px;
-    // border: 1px solid gray;
-    padding: .7rem;
+    border-radius: 0.25rem;
     cursor: pointer;
+    position: relative;
 
     .cardImgContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 0.25rem;
+
       img {
         max-width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 24px;
+        border-radius: inherit;
+        transition: transform 0.2s ease-in-out;
       }
     }
 
     .innerContent {
       display: flex;
       flex-direction: column;
+      margin-top: 2rem;
 
       .category {
         display: inline-block;
-        background-color: var(--blue);
-        color: var(--white);
+        background-color: var(--red-light);
+        color: var(--red);
         padding: .5rem 1rem;
-        border-radius: 100vh;
-        margin-right: 1rem;
+        border-radius: 0.25rem;
+        font-weight: 500;
+        font-size: .85rem;
+        text-transform: uppercase;
       }
 
       .blogTitle {
+        font-size: 2rem;
         margin-block: 1.5rem;
       }
 
-      .textContent {
-        height: 2.6rem;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        margin-bottom: 1rem;
-      }
+     .innerFooter {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
 
-      .created {
-        margin-top: auto;
+      .created, .bullet, .minutesToRead {
         color: var(--gray);
         font-size: .85rem;
+        text-transform: uppercase;
+        font-weight: 500;
       }
+     }
     }
 
     &:hover {
-      // border-color: var(--green);
-    }
-  }
-
-  &#first-card {
-    grid-row: 1 / span 2;
-
-    .cardContent {
-      display: block;
-
       .cardImgContainer {
-        margin-bottom: 2rem;
-
         img {
-          box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.2);
-        }
-      }
-
-      .innerContent {
-        .blogTitle {
-          font-size: 2.5rem;
+          transform: scale(1.05) rotate(2deg);
         }
       }
     }
   }
 }
+
+//   &#first-card {
+//     grid-row: 1 / span 2;
+
+//     .cardContent {
+//       display: block;
+
+//       .cardImgContainer {
+//         margin-bottom: 2rem;
+
+//         img {
+//           box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.2);
+//         }
+//       }
+
+//       .innerContent {
+//         .blogTitle {
+//           font-size: 2.5rem;
+//         }
+//       }
+//     }
+//   }
+// }

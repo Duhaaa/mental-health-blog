@@ -17,7 +17,7 @@ const QUERY_BLOGPOST = gql`
       }
       createdAt
       slug
-      coverPhoto {
+      detailCoverPhoto {
         url
       }
       category
@@ -65,18 +65,15 @@ export default function Slug({blogPost}) {
       <main>
         <div className={[styles.container, styles.header].join(' ')}>
           <span className={styles.category}>{blogPost.category}</span>
-          {minutesToRead(blogPost.content.text) > 0 &&
-            <span>{minutesToRead(blogPost.content.text)} min read</span>
-          }
           <h1 className={styles.title}>{blogPost.title}</h1>
           <p className={styles.created}>{formatDate(blogPost.createdAt)}</p>
         </div>
         <div className={styles.hero}>
-          <div style={{backgroundImage: `url(${blogPost.coverPhoto.url})`}} className={styles.coverPhoto}/>
+          <div style={{backgroundImage: `url(${blogPost.detailCoverPhoto.url})`}} className={styles.coverPhoto}/>
         </div>
       </main>
       <div className={[styles.container, styles.blogPost].join(' ')}>
-        <div dangerouslySetInnerHTML={{__html: blogPost.content.html}}/>
+        <div className={styles.content} dangerouslySetInnerHTML={{__html: blogPost.content.html}}/>
       </div>
     </div>
   );
