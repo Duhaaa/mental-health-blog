@@ -1,6 +1,5 @@
 import { GraphQLClient , gql} from 'graphql-request';
 import styles from '../../styles/BlogPost.module.scss';
-import { minutesToRead } from '../../helpers/minutesToRead';
 import { formatDate } from '../../helpers/formatDate';
 import Head from 'next/head';
 
