@@ -1,0 +1,148 @@
+.contactContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-block: 6rem;
+
+  .contactTitle {
+    font-size: 3.88rem;
+    margin-bottom: 2rem;
+
+    span {
+      color: var(--green);
+    }
+  }
+
+  .contactWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+
+    .contactImage {
+      width: 50%;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .contactContent {
+      width: 50%;
+
+      p {
+        margin-top: 1rem;
+        color: var(--gray);
+        line-height: 1.6em;
+      }
+
+      .formWrapper {
+        margin-top: 2rem;
+
+        .formControl {
+          margin-bottom: 1.5rem;
+
+          label {
+            display: block;
+            margin-bottom: .5rem;
+          }
+
+          input {
+            width: 50%;
+            border: 1px solid var(--gray);
+            padding: .5rem;
+            border-radius: 0.25rem;
+          }
+
+          textarea {
+            width: 50%;
+            border: 1px solid var(--gray);
+            padding: .5rem;
+            border-radius: 0.25rem;
+            resize: none;
+          }
+
+          button {
+            background-color: var(--green);
+            color: var(--white);
+            padding: 1.2rem 2.5rem;
+            border-radius: 100vh;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: .1rem;
+            cursor: pointer;
+            border: none;
+
+            &:hover {
+              background-color: var(--green-light);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1441px) {
+  .contactContainer {
+    max-width: 1200px;
+  }
+}
+
+@media only screen and (max-width: 1201px) {
+  .contactContainer {
+    max-width: 960px;
+
+    .contactTitle {
+      margin-bottom: 4rem;
+    }
+
+
+    .contactWrapper {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 8rem;
+
+      .contactImage {
+        width: 100%;
+      }
+
+      .contactContent {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 961px) {
+  .contactContainer {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (max-width: 721px) {
+  .contactContainer {
+    max-width: 100%;
+    padding-inline: 2rem;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .contactContainer {
+    .contactTitle {
+      font-size: 3rem;
+    }
+
+    .contactWrapper {
+      .contactContent {
+        .formWrapper {
+          .formControl {
+            input,
+            textarea {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

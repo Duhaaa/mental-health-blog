@@ -1,5 +1,6 @@
 import styles from '../styles/Navbar.module.scss';
 import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
 import { useRouter } from 'next/router';
 import { useEffect, useRef } from 'react';
 
@@ -9,10 +10,10 @@ export default function Navbar() {
   const progressBar = useRef();
 
   const navLinks = [
-    { title: 'Home', path: '/' },
-    { title: 'Blog', path: '/blog' },
-    { title: 'About', path: '/about' },
-    // { title: 'Contact', path: '/contact' },
+    { title: 'Home', section: 'hero', path: '/' },
+    { title: 'Blog', section: 'blog', path: '/#blog' },
+    { title: 'About', section: 'about', path: '/#about' },
+    { title: 'Contact', section: 'contact', path: '/#contact' },
   ];
 
   function updateProgressBar() {
@@ -34,7 +35,6 @@ export default function Navbar() {
     }
   }, [router.pathname]);
 
-
   return(
     <div>
       <nav ref={navBar} className={[styles.navbar, router.pathname !== '/' ? styles.notHomeNav : ''].join(' ')}>
@@ -45,10 +45,18 @@ export default function Navbar() {
             </a>
           </Link>
           <ul className={styles.navItems}>
-            {navLinks.map((navLink) => (
+            {router.pathname === '/' ?
+              navLinks.map((navLink) => (
+              <li key={navLink.title}>
+                <ScrollLink to={navLink.section} smooth={true} duration={500} spy={true} activeClass={styles.active} offset={-50}>
+                  {navLink.title}
+                </ScrollLink>
+              </li>
+            )) : (
+              navLinks.map((navLink) =>
               <li key={navLink.title}>
                 <Link href={navLink.path} passHref>
-                  <a className={router.pathname === navLink.path ? styles.active : ''}>{navLink.title}</a>
+                  <a className={navLink.path.includes('blog') ? styles.active : ''}>{navLink.title}</a>
                 </Link>
               </li>
             ))}

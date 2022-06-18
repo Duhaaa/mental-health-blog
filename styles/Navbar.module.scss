@@ -39,6 +39,7 @@
       color: var(--gray);
       font-weight: bold;
       position: relative;
+      cursor: pointer;
 
       &:after {
         content: '';
@@ -104,6 +105,8 @@
     .navContainer {
       max-width: 100%;
       padding-inline: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
   }
 }

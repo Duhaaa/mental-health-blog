@@ -1,8 +1,10 @@
 import BlogPost from '../components/BlogPost';
+import About from '../components/About';
+import Contact from '../components/Contact';
 import styles from '../styles/Home.module.scss';
 import { GraphQLClient , gql} from 'graphql-request';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
 
 const graphcms = new GraphQLClient(process.env.GRAPHCMS_API_URL);
 
@@ -52,16 +54,16 @@ export default function Home({blogPosts}) {
                 Come with me to the edge of the world. We will talk about mental health and how to deal with it. Internalized is the place where you can be yourself, together with me.
               </p>
               <p>
-                <Link href="/blog" passHref>
-                  <a className={styles.heroButton}>
+                <ScrollLink className={styles.heroButton} to="blog" smooth={true} duration={500} spy={true} offset={-50}>
+                  {/* <a className={styles.heroButton}> */}
                     Read my blog
-                  </a>
-                </Link>
+                  {/* </a> */}
+                </ScrollLink>
               </p>
             </div>
             <div className={styles.heroImage}>
               <img src="/hero.svg" alt="Internalized" />
-          </div>
+            </div>
           </div>
         </div>
         <div id="blog" className={styles.blogPostsContainer}>
@@ -78,6 +80,8 @@ export default function Home({blogPosts}) {
             ))}
           </div>
         </div>
+        <About />
+        <Contact />
       </main>
     </div>
   )

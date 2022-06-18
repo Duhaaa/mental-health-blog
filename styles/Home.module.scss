@@ -1,6 +1,5 @@
 .hero {
   height: 100vh;
-  background-color: var(--white);
   display: flex;
 
   .heroContainer {
@@ -38,6 +37,7 @@
         font-size: 1.2rem;
         font-weight: bold;
         letter-spacing: .1rem;
+        cursor: pointer;
 
         &:hover {
           background-color: var(--green-light);
@@ -58,7 +58,7 @@
 .blogPostsContainer {
   max-width: 1440px;
   margin: 0 auto;
-  padding-block: 10rem;
+  padding-block: 6rem;
 
   .blogPostsTitle {
     font-size: 3.88rem;
@@ -109,9 +109,9 @@
     }
   }
 
-    .blogPostsContainer {
-      max-width: 960px;
-    }
+  .blogPostsContainer {
+    max-width: 960px;
+  }
 }
 
 @media only screen and (max-width: 961px) {
