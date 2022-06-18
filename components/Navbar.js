@@ -48,7 +48,7 @@ export default function Navbar() {
             {router.pathname === '/' ?
               navLinks.map((navLink) => (
               <li key={navLink.title}>
-                <ScrollLink to={navLink.section} smooth={true} duration={500} spy={true} activeClass={styles.active} offset={-50}>
+                <ScrollLink to={navLink.section} smooth={true} duration={500} spy={true} activeClass={styles.active} offset={-160}>
                   {navLink.title}
                 </ScrollLink>
               </li>

@@ -25,7 +25,7 @@ export default function About() {
                 <textarea id="message" rows={5}/>
               </div>
               <div className={styles.formControl}>
-                <button type="submit">Send</button>
+                <button type="submit">Send message</button>
               </div>
             </form>
           </div>
