@@ -42,6 +42,11 @@ export default function Home({blogPosts}) {
     <div>
       <Head>
         <title>{`Home | ${process.env.NEXT_PUBLIC_APP_TITLE}`}</title>
+        <meta property="og:title" content={`${process.env.NEXT_PUBLIC_APP_TITLE}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.internalized.blog" />
+        <meta property="og:description" content="A blog about mental health" />
+        <meta property="og:image" content="https://www.internalized.blog/og-image.svg" />
       </Head>
       <main>
         <div id="hero" className={styles.hero}>
