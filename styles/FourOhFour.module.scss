@@ -1,0 +1,36 @@
+.FourOhFour {
+  margin-block: 8rem;
+  position: relative;
+  height: 100vh;
+
+  .errorWrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+    .errorImage {
+      width: 50%;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .errorContent {
+      width: 50%;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        margin-top: 1rem;
+        color: var(--gray);
+        line-height: 1.6em;
+      }
+    }
+  }
+}

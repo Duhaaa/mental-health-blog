@@ -9,7 +9,8 @@ export default function About() {
           <img src="/contact.svg" alt="Internalized" />
         </div>
         <div className={styles.contactContent}>
-          <p>Have an experience to share? Want to collaborate? Or just want to say hi?</p>
+          <h3>I&apos;d love to hear it</h3>
+          <p>Have an experience to share? Want to collaborate?<br/> Or just want to say hi?</p>
           <div className={styles.formWrapper}>
             <form>
               <div className={styles.formControl}>

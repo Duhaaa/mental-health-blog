@@ -29,6 +29,10 @@
     .contactContent {
       max-width: 700px;
 
+      h3 {
+        font-size: 1.5rem;
+      }
+
       p {
         margin-top: 1rem;
         color: var(--gray);
@@ -47,20 +51,28 @@
           }
 
           input {
-            width: 50%;
+            width: 100%;
             border: none;
             padding: 1rem;
             border-radius: 0.25rem;
             background-color: var(--gray-lighter);
+
+            &:focus {
+              outline: 1px solid var(--gray);
+            }
           }
 
           textarea {
-            width: 50%;
+            width: 100%;
             background-color: var(--gray-lighter);
             border: none;
             padding: 1rem;
             border-radius: 0.25rem;
             resize: vertical;
+
+            &:focus {
+              outline: 1px solid var(--gray);
+            }
           }
 
           button {
