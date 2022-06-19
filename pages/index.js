@@ -42,6 +42,8 @@ export default function Home({blogPosts}) {
     <div>
       <Head>
         <title>{`Home | ${process.env.NEXT_PUBLIC_APP_TITLE}`}</title>
+
+        <meta name="og:site_name" content={process.env.NEXT_PUBLIC_APP_TITLE} />
         <meta name="title" content={`${process.env.NEXT_PUBLIC_APP_TITLE} - Let's talk about mental health`} />
         <meta name="description" content="Mental health is an important topic that too many people are unaware of. This blog aims to improve awareness of mental health through the sharing of mental health resources, tips, and articles." />
 

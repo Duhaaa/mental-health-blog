@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://internalized.blog
+
+# Sitemaps
+Sitemap: https://internalized.blog/sitemap.xml
