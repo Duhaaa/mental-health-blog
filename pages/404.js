@@ -6,7 +6,7 @@ export default function FourOhFour() {
     <div className={styles.FourOhFour}>
       <div className={styles.errorWrapper}>
         <div className={styles.errorImage}>
-          <img src="/404.svg" alt="Page not found" />
+          <img src="/404.svg" alt="404 page not found" />
         </div>
         <div className={styles.errorContent}>
           <h1>Page not found</h1>

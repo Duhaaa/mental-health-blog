@@ -6,7 +6,7 @@ export default function About() {
       <h2 className={styles.contactTitle}>What&apos;s your <span>story</span>?</h2>
       <div className={styles.contactWrapper}>
         <div className={styles.contactImage}>
-          <img src="/contact.svg" alt="Internalized" />
+          <img src="/contact.svg" alt="girl holding an envelope" />
         </div>
         <div className={styles.contactContent}>
           <h3>I&apos;d love to hear it</h3>

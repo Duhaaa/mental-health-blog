@@ -76,7 +76,7 @@ export default function Home({blogPosts}) {
               </p>
             </div>
             <div className={styles.heroImage}>
-              <img src="/hero.svg" alt="Internalized" />
+              <img src="/hero.svg" alt="girl sitting behind the computer" />
             </div>
           </div>
         </div>
