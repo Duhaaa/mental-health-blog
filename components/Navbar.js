@@ -41,7 +41,7 @@ export default function Navbar() {
         <div className={styles.navContainer}>
           <Link href="/" passHref>
             <a className={styles.homelink}>
-              {process.env.NEXT_PUBLIC_APP_TITLE}.
+              {process.env.NEXT_PUBLIC_APP_TITLE}
             </a>
           </Link>
           <ul className={styles.navItems}>

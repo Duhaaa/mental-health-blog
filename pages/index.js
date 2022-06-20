@@ -67,13 +67,11 @@ export default function Home({blogPosts}) {
                 Let&apos;s talk about <span>mental health</span>
               </h1>
               <p className={styles.heroDescription}>
-                Come with me to the edge of the world. We will talk about mental health and how to deal with it. Internalized is the place where you can be yourself, together with me.
+                Discover personal stories from people around the world who talk openly about mental health. Internalized is a blog that aims to raise mental health awareness through sharing resources, interviews, and tips.
               </p>
               <p>
                 <ScrollLink className={styles.heroButton} to="blog" smooth={true} duration={500} spy={true} offset={-50}>
-                  {/* <a className={styles.heroButton}> */}
-                    Read my blog
-                  {/* </a> */}
+                    Join the conversation
                 </ScrollLink>
               </p>
             </div>

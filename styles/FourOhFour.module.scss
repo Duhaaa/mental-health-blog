@@ -1,6 +1,8 @@
 .FourOhFour {
-  margin-top: 8rem;
-  height: calc(100vh - 12rem);
+  height: calc(100vh - 4rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .errorWrapper {
     max-width: 1440px;
@@ -11,7 +13,7 @@
     gap: 4rem;
 
     .errorImage {
-      // width: 50%;
+      width: 50%;
 
       img {
         max-width: 100%;
@@ -19,7 +21,7 @@
     }
 
     .errorContent {
-      // width: 50%;
+      margin: 0 auto;
 
       h1 {
         font-size: 3.88rem;
@@ -29,6 +31,72 @@
         margin-top: 1rem;
         color: var(--gray);
         line-height: 1.6em;
+        margin-bottom: 4rem;
+      }
+
+      .link {
+        background-color: var(--green);
+        color: var(--white);
+        padding: 1.2rem 2.5rem;
+        border-radius: 100vh;
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: .1rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--green-light);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1441px) {
+  .FourOhFour {
+    .errorWrapper {
+      max-width: 1200px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1201px) {
+  .FourOhFour {
+    .errorWrapper {
+      max-width: 960px;
+    }
+  }
+}
+
+@media only screen and (max-width: 961px) {
+  .FourOhFour {
+    .errorWrapper {
+      max-width: 720px;
+
+      .errorContent {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 721px) {
+  .FourOhFour {
+    margin-block: 4rem;
+    .errorWrapper {
+      max-width: 100%;
+      padding-inline: 2rem;
+      flex-direction: column;
+
+      .errorImage {
+        width: 100%;
+      }
+
+      .errorContent {
+        width: 100%;
+        margin-top: 2rem;
       }
     }
   }
