@@ -45,12 +45,12 @@ export default function Home({blogPosts}) {
 
         <meta name="og:site_name" content={`${process.env.NEXT_PUBLIC_APP_TITLE}`}/>
         <meta name="title" content={`${process.env.NEXT_PUBLIC_APP_TITLE} - Mental Health Blog`} />
-        <meta name="description" content="Mental health is an important topic that too many people are unaware of. Internalized is a blog that aims to raise mental health awareness through sharing resources, interviews, and tips." />
+        <meta name="description" content="A blog that aims to raise mental health awareness through sharing resources, interviews, and tips." />
 
         <meta property="og:title" content={`${process.env.NEXT_PUBLIC_APP_TITLE} - Let's talk about mental health`} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.internalized.blog" />
-        <meta property="og:description" content="Mental health is an important topic that too many people are unaware of. Internalized is a blog that aims to raise mental health awareness through sharing resources, interviews, and tips." />
+        <meta property="og:description" content="A blog that aims to raise mental health awareness through sharing resources, interviews, and tips." />
         <meta property="og:image" content="https://www.internalized.blog/og-image.svg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -58,8 +58,8 @@ export default function Home({blogPosts}) {
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://internalized.blog/" />
-        <meta property="twitter:title" content={`${process.env.NEXT_PUBLIC_APP_TITLE} - Let's talk about mental health`} />
-        <meta property="twitter:description" content="Mental health is an important topic that too many people are unaware of. Internalized is a blog that aims to raise mental health awareness through sharing resources, interviews, and tips."/>
+        <meta property="twitter:title" content={`${process.env.NEXT_PUBLIC_APP_TITLE} - Mental Health Blog`} />
+        <meta property="twitter:description" content="A blog that aims to raise mental health awareness through sharing resources, interviews, and tips."/>
         <meta property="twitter:image" content="https://www.internalized.blog/og-image.svg" />
       </Head>
       <main>

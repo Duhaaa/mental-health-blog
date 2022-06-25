@@ -1,7 +1,7 @@
 import styles from '../styles/Contact.module.scss';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 export default function About() {
   const button = useRef('Send Message');
