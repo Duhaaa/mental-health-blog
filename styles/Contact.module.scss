@@ -60,6 +60,10 @@
             &:focus {
               outline: 1px solid var(--gray);
             }
+
+            &[aria-invalid="true"] {
+              outline: 1px solid var(--red);
+            }
           }
 
           textarea {
@@ -72,6 +76,10 @@
 
             &:focus {
               outline: 1px solid var(--gray);
+            }
+
+            &[aria-invalid="true"] {
+              outline: 1px solid var(--red);
             }
           }
 
@@ -88,6 +96,39 @@
 
             &:hover {
               background-color: var(--green-light);
+            }
+          }
+
+          &#shouldBeIgnored {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            z-index: -1;
+          }
+
+          .errorWrapper {
+            margin-top: .5rem;
+
+            &#charCountWrapper {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+            }
+
+            .error {
+              color: var(--red);
+              font-size: .8rem;
+            }
+
+            .charCount {
+              color: var(--gray);
+              font-size: .8rem;
+              text-align: right;
+              display: inline-block;
             }
           }
         }
