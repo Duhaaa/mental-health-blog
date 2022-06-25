@@ -44,10 +44,10 @@ export default function Home({blogPosts}) {
         <title>{`Home | ${process.env.NEXT_PUBLIC_APP_TITLE}`} - Mental Health Blog</title>
 
         <meta name="og:site_name" content={`${process.env.NEXT_PUBLIC_APP_TITLE}`}/>
-        <meta name="title" content={`${process.env.NEXT_PUBLIC_APP_TITLE} - Mental Health Blog`} />
+        <meta name="title" content={`Mental Health Blog - ${process.env.NEXT_PUBLIC_APP_TITLE}`} />
         <meta name="description" content="A blog that aims to raise mental health awareness through sharing resources, interviews, and tips." />
 
-        <meta property="og:title" content={`${process.env.NEXT_PUBLIC_APP_TITLE} - Let's talk about mental health`} />
+        <meta property="og:title" content={`Mental Health Blog - ${process.env.NEXT_PUBLIC_APP_TITLE}`} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.internalized.blog" />
         <meta property="og:description" content="A blog that aims to raise mental health awareness through sharing resources, interviews, and tips." />
@@ -58,7 +58,7 @@ export default function Home({blogPosts}) {
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://internalized.blog/" />
-        <meta property="twitter:title" content={`${process.env.NEXT_PUBLIC_APP_TITLE} - Mental Health Blog`} />
+        <meta property="twitter:title" content={`Mental Health Blog - ${process.env.NEXT_PUBLIC_APP_TITLE}`} />
         <meta property="twitter:description" content="A blog that aims to raise mental health awareness through sharing resources, interviews, and tips."/>
         <meta property="twitter:image" content="https://www.internalized.blog/og-image.svg" />
       </Head>
