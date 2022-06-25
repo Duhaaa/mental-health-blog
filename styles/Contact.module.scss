@@ -97,6 +97,15 @@
             &:hover {
               background-color: var(--green-light);
             }
+
+            &:disabled {
+              opacity: 0.5;
+              cursor: not-allowed;
+
+              &:hover {
+                background-color: var(--green);
+              }
+            }
           }
 
           &#shouldBeIgnored {

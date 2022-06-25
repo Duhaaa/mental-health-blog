@@ -1,9 +1,12 @@
 import styles from '../styles/Contact.module.scss';
 import { useForm } from 'react-hook-form';
-import sgMail from '@sendgrid/mail';
+import axios from 'axios';
+import { useEffect, useRef } from 'react';
 
 export default function About() {
-  const { register, watch, handleSubmit, formState: { errors, isValid } } = useForm({
+  const button = useRef('Send Message');
+
+  const { register, watch, reset, handleSubmit, formState: { errors, isValid } } = useForm({
     mode: 'onChange',
     defaultValues: {
       ignore: '',
@@ -13,24 +16,28 @@ export default function About() {
     }
   });
 
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
   const onSubmit = async(data) => {
     if (!isValid || errors.length) return;
 
-    const emailBody = {
-      to: 'info@internalized.blog',
-      from: data.email,
-      subject: 'Contact Form Submission',
-      text: data.message,
-      html: `<p>${data.message}</p>`
+    button.current = 'Sending...';
+
+    let config = {
+      method: 'POST',
+      url: '/api/contact_submission',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      data
     }
 
     try {
-      await sgMail.send(emailBody);
-    }
-    catch (error) {
-      console.error(error);
+      const response = await axios(config);
+      if (response.status === 200) {
+        button.current = 'Message Sent!';
+        reset();
+      }
+    } catch (error) {
+      button.current = 'Something went wrong...';
     }
   }
 
@@ -81,7 +88,7 @@ export default function About() {
                 </div>
               </div>
               <div className={styles.formControl}>
-                <button type="submit" disabled={!isValid}>Send message</button>
+                <button type="submit" disabled={!isValid}>{button.current}</button>
               </div>
             </form>
           </div>
