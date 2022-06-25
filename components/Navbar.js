@@ -40,7 +40,7 @@ export default function Navbar() {
       <nav ref={navBar} className={[styles.navbar, router.pathname !== '/' ? styles.notHomeNav : ''].join(' ')}>
         <div className={styles.navContainer}>
           <Link href="/" passHref>
-            <a className={styles.homelink}>
+            <a className={styles.homelink} title="Home">
               {process.env.NEXT_PUBLIC_APP_TITLE}
             </a>
           </Link>
@@ -48,7 +48,7 @@ export default function Navbar() {
             {router.pathname === '/' ?
               navLinks.map((navLink) => (
               <li key={navLink.title}>
-                <ScrollLink to={navLink.section} smooth={true} duration={500} spy={true} activeClass={styles.active} offset={-160}>
+                <ScrollLink to={navLink.section} smooth={true} duration={500} spy={true} activeClass={styles.active} offset={-160} title={navLink.title}>
                   {navLink.title}
                 </ScrollLink>
               </li>

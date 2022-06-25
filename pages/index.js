@@ -63,7 +63,7 @@ export default function Home({blogPosts}) {
         <meta property="twitter:image" content="https://www.internalized.blog/og-image.svg" />
       </Head>
       <main>
-        <div id="hero" className={styles.hero}>
+        <section id="hero" className={styles.hero}>
           <div className={styles.heroContainer}>
             <div className={styles.heroContent}>
               <h1 className={styles.heroTitle}>
@@ -73,7 +73,7 @@ export default function Home({blogPosts}) {
                 Discover personal stories from people around the world who talk openly about mental health. Internalized is a blog that aims to raise mental health awareness through sharing resources, interviews, and tips.
               </p>
               <p>
-                <ScrollLink className={styles.heroButton} to="blog" smooth={true} duration={500} spy={true} offset={-50}>
+                <ScrollLink className={styles.heroButton} to="blog" smooth={true} duration={500} spy={true} offset={-50} title="To Blog Overview">
                     Join the conversation
                 </ScrollLink>
               </p>
@@ -82,8 +82,8 @@ export default function Home({blogPosts}) {
               <img src="/hero.svg" alt="girl sitting behind the computer" />
             </div>
           </div>
-        </div>
-        <div id="blog" className={styles.blogPostsContainer}>
+        </section>
+        <section itemScope itemType="http://schema.org/Blog" id="blog" className={styles.blogPostsContainer}>
           <h2 className={styles.blogPostsTitle}>
             Our conversation starts <span>here</span>
           </h2>
@@ -96,7 +96,7 @@ export default function Home({blogPosts}) {
               />
             ))}
           </div>
-        </div>
+        </section>
         <About />
         <Contact />
       </main>
