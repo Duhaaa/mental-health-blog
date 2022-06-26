@@ -1667,6 +1667,11 @@
     "loose-envify" "^1.1.0"
     "scheduler" "^0.22.0"
 
+"react-gtm-module@^2.0.11":
+  "integrity" "sha512-8gyj4TTxeP7eEyc2QKawEuQoAZdjKvMY4pgWfycGmqGByhs17fR+zEBs0JUDq4US/l+vbTl+6zvUIx27iDo/Vw=="
+  "resolved" "https://registry.npmjs.org/react-gtm-module/-/react-gtm-module-2.0.11.tgz"
+  "version" "2.0.11"
+
 "react-hook-form@^7.32.2":
   "integrity" "sha512-F1A6n762xaRhvtQH5SkQQhMr19cCkHZYesTcKJJeNmrphiZp/cYFTIzC05FnQry0SspM54oPJ9tXFXlzya8VNQ=="
   "resolved" "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.32.2.tgz"

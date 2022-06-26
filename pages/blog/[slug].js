@@ -66,7 +66,7 @@ export default function Slug({blogPost}) {
   return (
     <div>
       <Head>
-        <title>{`${blogPost.title} | ${process.env.NEXT_PUBLIC_APP_TITLE}`} - Mental Health Blog</title>
+        <title>{`${blogPost.title} | ${process.env.NEXT_PUBLIC_APP_TITLE}`}</title>
 
         <meta name="og:site_name" content={`${process.env.NEXT_PUBLIC_APP_TITLE}`}/>
         <meta name="title" content={`Mental Health Blog - ${process.env.NEXT_PUBLIC_APP_TITLE}`} />
