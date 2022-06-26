@@ -2,6 +2,7 @@ import styles from '../styles/Contact.module.scss';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useRef } from 'react';
+import Image from 'next/image';
 
 export default function About() {
   const button = useRef('Send Message');
@@ -50,7 +51,7 @@ export default function About() {
       <h2 className={styles.contactTitle}>What&apos;s your <span>story</span>?</h2>
       <div className={styles.contactWrapper}>
         <div className={styles.contactImage}>
-          <img src="/contact.svg" alt="girl holding an envelope" />
+          <Image src="/contact.svg" alt="girl holding an envelope" width={894.24907} height={448.2822} />
         </div>
         <div className={styles.contactContent}>
           <h3>I&apos;d love to hear it</h3>

@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import styles from '../styles/FourOhFour.module.scss'
+import Image from 'next/image'
 
 export default function FourOhFour() {
   return (
     <div className={styles.FourOhFour}>
       <div className={styles.errorWrapper}>
         <div className={styles.errorImage}>
-          <img src="/404.svg" alt="404 page not found" />
+          <Image src="/404.svg" alt="404 page not found" width={860.13137} height={571.14799} />
         </div>
         <div className={styles.errorContent}>
           <h1>Page not found</h1>

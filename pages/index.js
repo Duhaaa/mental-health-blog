@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.scss';
 import { GraphQLClient , gql} from 'graphql-request';
 import Head from 'next/head';
 import { Link as ScrollLink } from 'react-scroll';
+import Image from 'next/image';
 
 const graphcms = new GraphQLClient(process.env.GRAPHCMS_API_URL);
 
@@ -79,7 +80,7 @@ export default function Home({blogPosts}) {
               </p>
             </div>
             <div className={styles.heroImage}>
-              <img src="/hero.svg" alt="girl sitting behind the computer" />
+              <Image src="/hero.svg" width={882.34637} height={778.99856} alt="girl sitting behind the computer" />
             </div>
           </div>
         </section>

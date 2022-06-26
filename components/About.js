@@ -1,4 +1,5 @@
 import styles from '../styles/About.module.scss';
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -10,7 +11,7 @@ export default function About() {
         <p>For now, the main goal is to share personal experiences and to show personal stories of individuals that are also dealing with taboos and stigmas. By portraying the topic of mental health in different cultures, I hope that some of you may be able to relate to this. Or at least learn something new.</p>
       </div>
       <div className={styles.aboutImage}>
-        <img src="/about.svg" alt="girl sitting on a browser with a laptop on her lap" />
+        <Image src="/about.svg" alt="girl sitting on a browser with a laptop on her lap" width={931} height={633.23506}/>
       </div>
     </div>
   )

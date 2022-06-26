@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styles from '../styles/BlogPosts.module.scss';
 import { minutesToRead } from '../helpers/minutesToRead';
 import { formatDate } from '../helpers/formatDate';
+import Image from 'next/image';
 
 export default function BlogPost({title, coverPhoto, slug, index, category, createdAt, content}) {
   return (
@@ -10,7 +11,7 @@ export default function BlogPost({title, coverPhoto, slug, index, category, crea
         <a title={title}>
           <div className={styles.cardContent}>
             <div className={styles.cardImgContainer}>
-              <img src={coverPhoto.url} alt={title} />
+              <Image src={coverPhoto.url} alt={title} width={640} height={640} />
             </div>
             <div className={styles.innerContent}>
               <div>

@@ -125,9 +125,8 @@
     max-width: 720px;
 
     .blogPosts {
-      display: flex;
-      flex-direction: column;
-      gap: 4rem;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 4rem;
     }
   }
 }
@@ -143,6 +142,11 @@
   .blogPostsContainer {
     max-width: 100%;
     padding-inline: 2rem;
+
+    .blogPosts {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 2rem;
+    }
   }
 }
 

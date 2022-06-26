@@ -95,6 +95,7 @@
 
 @media only screen and (max-width: 961px) {
   .card {
+    grid-row: auto;
     .cardContent {
       .cardImgContainer {
         img {
