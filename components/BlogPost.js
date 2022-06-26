@@ -11,7 +11,7 @@ export default function BlogPost({title, coverPhoto, slug, index, category, crea
         <a title={title}>
           <div className={styles.cardContent}>
             <div className={styles.cardImgContainer}>
-              <Image src={coverPhoto.url} alt={title} width={640} height={640} />
+              <Image src={coverPhoto.url} alt={coverPhoto.alt} width={coverPhoto.width} height={coverPhoto.height} />
             </div>
             <div className={styles.innerContent}>
               <div>

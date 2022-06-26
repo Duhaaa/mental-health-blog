@@ -22,6 +22,9 @@ const QUERY_BLOGPOSTS = gql`
     slug
     coverPhoto {
       url
+      width
+      height
+      alt
     }
     category
     createdAt
