@@ -4,12 +4,23 @@ import Footer from '../components/Footer'
 import Head from 'next/head';
 import TagManager from 'react-gtm-module';
 import { useEffect } from 'react'
-import Script from 'next/script';
+import Script from 'next/script'
+import { useRouter } from "next/router";
+import * as gtag from "../lib/gtag";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-NFCS3CN' });
-  }, []);
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
   return (
     <>
       <Head>
@@ -21,18 +32,17 @@ function MyApp({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-CSMS1S0777" strategy="afterInteractive"/>
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
+      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-CSMS1S0777" />
+      <Script id="google-analytics" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html:
+        `
           window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
+          function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
-          gtag('config', 'G-CSMS1S0777');
-        `}
-      </Script>
+          gtag('config', '${gtag.GA_TRACKING_ID}', {
+            page_path: window.location.pathname,
+          });
+        `,
+      }}/>
       <Navbar />
       <Component {...pageProps} />
       <Footer />
