@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Head from 'next/head';
 import TagManager from 'react-gtm-module';
 import { useEffect } from 'react'
+import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -20,6 +21,18 @@ function MyApp({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-CSMS1S0777" strategy="afterInteractive"/>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+
+          gtag('config', 'G-CSMS1S0777');
+        `}
+      </Script>
       <Navbar />
       <Component {...pageProps} />
       <Footer />

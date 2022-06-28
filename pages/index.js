@@ -83,7 +83,7 @@ export default function Home({blogPosts}) {
               </p>
             </div>
             <div className={styles.heroImage}>
-              <Image src="/hero.svg" width={882.34637} height={778.99856} alt="girl sitting behind the computer" />
+              <Image src="/hero.svg" width={882.34637} height={778.99856} alt="girl sitting behind the computer" priority/>
             </div>
           </div>
         </section>
