@@ -9,13 +9,14 @@
 
   .category {
     display: inline-block;
-    background-color: var(--red-light);
-    color: var(--red);
-    padding: .5rem 1rem;
+    background-color: var(--green);
+    color: var(--white);
+    padding: 0.3rem 0.5rem;
     border-radius: 0.25rem;
     font-weight: 500;
     font-size: .85rem;
     text-transform: uppercase;
+    letter-spacing: 0.15rem;
   }
 
   h1 {
@@ -34,11 +35,12 @@
 .hero {
   height: 32rem;
   width: 80%;
+  margin: 0 auto;
 
   .coverPhoto {
     height: 100%;
     width: 100%;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
     background-attachment: fixed;
@@ -49,18 +51,18 @@
   margin-top: 2rem;
   max-width: 700px;
 
-  .title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
   .content {
     margin-bottom: 5rem;
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
 
     h3 {
       font-size: 1.5rem;
       margin-top: 2rem;
-      margin-bottom: 1rem;
+      line-height: 1.2em;
     }
 
     p {
@@ -72,6 +74,32 @@
       color: var(--blue);
       text-decoration: underline;
     }
+
+    blockquote {
+      position: relative;
+      margin-bottom: 4rem;
+      font-size: 1.2rem;
+      border-left: 2px solid var(--gray);
+      padding-top: 4rem;
+      padding-left: 2rem;
+
+      &:before {
+        position: absolute;
+        font-size: 6rem;
+        color: var(--gray-light);
+      }
+
+      &:before {
+        content: '“';
+        left: 2rem;
+        top: -1rem;
+      }
+
+      a {
+        display: inline-block;
+        margin-top: 2rem;
+      }
+    }
   }
 }
 
@@ -82,6 +110,12 @@
 
   .hero {
     width: 100%;
+    margin: 0;
+
+    .coverPhoto {
+      background-attachment: scroll;
+      background-size: cover;
+    }
   }
 
   .blogPost {

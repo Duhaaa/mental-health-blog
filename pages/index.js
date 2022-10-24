@@ -78,7 +78,7 @@ export default function Home({blogPosts}) {
               </p>
               <p>
                 <ScrollLink className={styles.heroButton} to="blog" smooth={true} duration={500} spy={true} offset={-50} title="To Blog Overview">
-                    Join the conversation
+                    Read my blog
                 </ScrollLink>
               </p>
             </div>
@@ -89,7 +89,7 @@ export default function Home({blogPosts}) {
         </section>
         <section itemScope itemType="http://schema.org/Blog" id="blog" className={styles.blogPostsContainer}>
           <h2 className={styles.blogPostsTitle}>
-            Our conversation starts <span>here</span>
+            Latest blogs
           </h2>
           <div className={styles.blogPosts}>
             {blogPosts.map((blogPost, index) => (

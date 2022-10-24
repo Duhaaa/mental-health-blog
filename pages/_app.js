@@ -13,12 +13,26 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-NFCS3CN' });
+
     const handleRouteChange = (url) => {
       gtag.pageview(url);
     };
+
     router.events.on("routeChangeComplete", handleRouteChange);
+
+    // const handleClicks = (e) => {
+    //   console.log(e.target.tagName)
+    //   if (e.target.tagName === "A" || e.target.tagName === "a") {
+    //     console.log('a');
+    //   }
+    // }
+
+    // document.addEventListener('click', handleClicks);
+
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
+
+      // document.removeEventListener('click', handleClicks);
     };
   }, [router.events]);
   return (

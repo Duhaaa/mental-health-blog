@@ -97,10 +97,10 @@ export default function Slug({blogPost}) {
         <div className={styles.hero}>
           <div style={{backgroundImage: `url(${blogPost.detailCoverPhoto.url})`}} className={styles.coverPhoto}/>
         </div>
+        <div className={[styles.container, styles.blogPost].join(' ')}>
+          <div className={styles.content} dangerouslySetInnerHTML={{__html: blogPost.content.html}}/>
+        </div>
       </main>
-      <div className={[styles.container, styles.blogPost].join(' ')}>
-        <div className={styles.content} dangerouslySetInnerHTML={{__html: blogPost.content.html}}/>
-      </div>
     </div>
   );
 }

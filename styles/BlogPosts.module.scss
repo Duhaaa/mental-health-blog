@@ -29,13 +29,14 @@
 
       .category {
         display: inline-block;
-        background-color: var(--red-light);
-        color: var(--red);
-        padding: .5rem 1rem;
+        background-color: var(--green);
+        color: var(--white);
+        padding: 0.3rem 0.5rem;
         border-radius: 0.25rem;
         font-weight: 500;
         font-size: .85rem;
         text-transform: uppercase;
+        letter-spacing: 0.15rem;
       }
 
       .blogTitle {
@@ -68,7 +69,7 @@
     &:hover {
       .cardImgContainer {
         img {
-          transform: scale(1.05) rotate(2deg);
+          transform: scale(1.05);
         }
       }
     }

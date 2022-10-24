@@ -84,7 +84,7 @@
           }
 
           button {
-            background-color: var(--green);
+            background-color: var(--blue);
             color: var(--white);
             padding: 1.2rem 2.5rem;
             border-radius: 100vh;
@@ -95,7 +95,7 @@
             border: none;
 
             &:hover {
-              background-color: var(--green-light);
+              background-color: var(--blue-light);
             }
 
             &:disabled {
@@ -103,7 +103,7 @@
               cursor: not-allowed;
 
               &:hover {
-                background-color: var(--green);
+                background-color: var(--blue);
               }
             }
           }
